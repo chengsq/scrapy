@@ -1,2 +1,2 @@
 #!/bin/bash
-scrapy crawl Lianjia  -o  aa.csv 
+scrapy crawl Lianjia

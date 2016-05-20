@@ -9,4 +9,5 @@
 class TestscrapyPipeline(object):
     def process_item(self, item, spider):
         print "TestscrapyPipeline ......."
+        print item
         return item

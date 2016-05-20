@@ -1,7 +1,8 @@
 # TestSrapy
 
 # dependency
-### scrapy 
+### scrapy  sudo pip install scrapy
+
 
 ### run
 #### sh run.sh

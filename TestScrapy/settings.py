@@ -9,17 +9,20 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
+
+
 BOT_NAME = 'TestScrapy'
 
 SPIDER_MODULES = ['TestScrapy.spiders']
 NEWSPIDER_MODULE = 'TestScrapy.spiders'
 
-ITEM_PIPELINES = {'TestScrapy.pipelines.TestscrapyPipeline': 1}
+ITEM_PIPELINES = {'TestScrapy.pipelines.TestscrapyPipeline': 300,
+                   'scrapy_mongodb.MongoDBPipeline':200}
 
-FEED_EXPORTERS = {}
-FEED_FORMAT = 'json'
-FEED_EXPORTERS_BASE = {}
-FEED_URI = 'file.json'
+MONGODB_URI = 'mongodb://localhost:27017'
+MONGODB_DATABASE = 'scrapy'
+MONGODB_COLLECTION = 'items'
+#MONGODB_UNIQUE_KEY = 'url'
 
 
 
