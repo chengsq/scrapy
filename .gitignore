@@ -1,0 +1,6 @@
+*~
+*.pyc
+*.pyo
+*npy
+*.log
+*.log.previous
