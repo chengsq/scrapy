@@ -1,8 +1,9 @@
 # TestSrapy
+   
+## dependency
+ * scrapy  sudo pip install scrapy
+ * mongodb
+ * scrapy-mongodb sudo pip install scrapy-mongodb
 
-# dependency
-### scrapy  sudo pip install scrapy
-
-
-### run
-#### sh run.sh
+## run
+ * sh run.sh
