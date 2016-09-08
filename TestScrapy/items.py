@@ -15,6 +15,15 @@ class TestscrapyItem(scrapy.Item):
     pass
 
 
+class HouseItem(scrapy.Item):
+    total_price =  scrapy.Field()
+    unit_price = scrapy.Field()
+    address = scrapy.Field()
+    title = scrapy.Field()
+
+    print "HouseItem------------"
+
+
 
 class SchoolItem(scrapy.Item):
     name = scrapy.Field()

@@ -1,2 +1,2 @@
 #!/bin/bash
-scrapy crawl Lianjia
+scrapy crawl Lianjiaxiaoqu

@@ -18,9 +18,10 @@ class LianjiaSpider(scrapy.Spider):
         #base_link = response.xpath('//base/@href').extract()
         links = response.xpath("/html/body/div[5]/div[2]/div/div/div[1]/ul/li")
         filename = response.url.split("/")[-2]
-        #print base_link
+        print "----------"
+        print links
         for link in links[0:-1]:
-            #print link.extract()
+            print link.extract()
             shool_info = SchoolItem()
             shool_info['url'] = link.xpath("a/@href").extract()
             shool_info['img_url'] = link.xpath("a/img/@src").extract()

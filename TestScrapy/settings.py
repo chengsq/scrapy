@@ -16,12 +16,8 @@ BOT_NAME = 'TestScrapy'
 SPIDER_MODULES = ['TestScrapy.spiders']
 NEWSPIDER_MODULE = 'TestScrapy.spiders'
 
-ITEM_PIPELINES = {'TestScrapy.pipelines.TestscrapyPipeline': 300,
-                   'scrapy_mongodb.MongoDBPipeline':200}
+ITEM_PIPELINES = {'TestScrapy.pipelines.TestscrapyPipeline': 300}
 
-MONGODB_URI = 'mongodb://localhost:27017'
-MONGODB_DATABASE = 'scrapy'
-MONGODB_COLLECTION = 'items'
 #MONGODB_UNIQUE_KEY = 'url'
 
 
@@ -60,6 +56,7 @@ ROBOTSTXT_OBEY = True
 #SPIDER_MIDDLEWARES = {
 #    'TestScrapy.middlewares.MyCustomSpiderMiddleware': 543,
 #}
+
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
