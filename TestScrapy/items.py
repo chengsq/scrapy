@@ -23,19 +23,3 @@ class HouseItem(scrapy.Item):
     position = scrapy.Field()
 
     print "HouseItem------------"
-
-
-class SchoolItem(scrapy.Item):
-    name = scrapy.Field()
-    url = scrapy.Field()
-    img_url = scrapy.Field()
-    shool_name = scrapy.Field()
-    shool_alias_name = scrapy.Field()
-    address = scrapy.Field()
-    retive_high_school = scrapy.Field()
-    price_start = scrapy.Field()
-    avg_price = scrapy.Field()
-    Community_num = scrapy.Field()
-    house_num = scrapy.Field()
-    print "SchoolItem------------"
-    # print name

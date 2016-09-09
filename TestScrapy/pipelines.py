@@ -15,7 +15,7 @@ basedir = os.path.dirname(os.path.dirname(__file__))
 class TestscrapyPipeline(object):
 
     def __init__(self):
-        self.file = open(basedir + '/infos.json', 'w')
+        self.file = open(basedir + '/info.json', 'w')
         self.csv_writer = csv_writer.CSVWriter(
             ['address', 'total_price', 'unit_price', 'title'])
 
