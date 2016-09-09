@@ -2,3 +2,4 @@ scrapy
 scrapy-mongodb
 pandas
 json
+urlparse

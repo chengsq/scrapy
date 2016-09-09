@@ -11,10 +11,13 @@ import csv_writer
 
 basedir = os.path.dirname(os.path.dirname(__file__))
 
+
 class TestscrapyPipeline(object):
+
     def __init__(self):
         self.file = open(basedir + '/infos.json', 'w')
-        self.csv_writer = csv_writer.CSVWriter(['address', 'total_price', 'unit_price', 'title'])
+        self.csv_writer = csv_writer.CSVWriter(
+            ['address', 'total_price', 'unit_price', 'title'])
 
     def process_item(self, item, spider):
         line = json.dumps(dict(item)) + "\n"

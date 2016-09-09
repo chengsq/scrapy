@@ -11,18 +11,18 @@ import scrapy
 class TestscrapyItem(scrapy.Item):
     # define the fields for your item here like:
     name = scrapy.Field()
-    print "------------",name
+    print "------------", name
     pass
 
 
 class HouseItem(scrapy.Item):
-    total_price =  scrapy.Field()
+    total_price = scrapy.Field()
     unit_price = scrapy.Field()
     address = scrapy.Field()
     title = scrapy.Field()
+    position = scrapy.Field()
 
     print "HouseItem------------"
-
 
 
 class SchoolItem(scrapy.Item):
@@ -38,4 +38,4 @@ class SchoolItem(scrapy.Item):
     Community_num = scrapy.Field()
     house_num = scrapy.Field()
     print "SchoolItem------------"
-    #print name
+    # print name
