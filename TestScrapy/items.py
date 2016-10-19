@@ -25,6 +25,29 @@ class HouseItem(scrapy.Item):
     print "HouseItem------------"
 
 
+class ChengjiaoHouseItem(scrapy.Item):
+    total_price = scrapy.Field()
+    unit_price = scrapy.Field()
+    title = scrapy.Field()
+    area = scrapy.Field()
+    subarea = scrapy.Field()
+    chengjiao_date = scrapy.Field()
+    size = scrapy.Field()
+    href = scrapy.Field()
+    description = scrapy.Field()
+
+class AreaItem(scrapy.Item):
+    house_number = scrapy.Field()
+    house_mean_price = scrapy.Field()
+    area = scrapy.Field()
+    subarea = scrapy.Field()
+    date = scrapy.Field()
+    city = scrapy.Field()
+    print "AreaItem------------"
+
+
+
+
 class ZhihuItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()

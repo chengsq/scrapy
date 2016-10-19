@@ -17,7 +17,7 @@ class LianjiaSpider(scrapy.Spider):
     name = "Lianjiaxiaoqu"
     allowed_domains = ["bj.lianjia.com"]
     start_urls = [
-        "http://bj.lianjia.com/ershoufang/",
+        "http://tj.lianjia.com/ershoufang/",
 
     ]
 

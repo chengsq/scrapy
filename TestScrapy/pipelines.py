@@ -8,18 +8,25 @@
 import os
 import json
 import csv_writer
-
-basedir = os.path.dirname(os.path.dirname(__file__))
-
+from datetime import *
 
 class TestscrapyPipeline(object):
 
     def __init__(self):
-        self.file = open(basedir + '/info.json', 'w')
-        self.csv_writer = csv_writer.CSVWriter(
-            ['address', 'total_price', 'unit_price', 'title'])
+        d =date.today()
+        str=d.strftime("%Y-%m-%d")
+        self.is_opened = False;
+
+
 
     def process_item(self, item, spider):
+        print "process_item  TestscrapyPipeline"
+        file_path = spider.save_file_path
+        if not self.is_opened:
+            self.file = open(file_path, 'a+')
+            self.is_opened = True
+
+        #print spider.start_urls
         line = json.dumps(dict(item)) + "\n"
         self.file.write(line.encode('utf-8'))
         return item
