@@ -74,7 +74,7 @@ class LianjiaSpider(scrapy.Spider):
         item['date'] = date.today().strftime("%Y-%m-%d")
         yield item
 
-        return 
+        return
         area_url = response.xpath(
             "//div[@data-role ='ershoufang']/div/a/@href").extract()
         # area_url = response.xpath(

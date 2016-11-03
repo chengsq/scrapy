@@ -42,6 +42,7 @@ if __name__ == '__main__':
     print df.describe()
     print df.head()
     #[['area','chengjiao_date']]
+    df = df.drop_duplicates(subset = ['date','area'],keep = 'first')
     df.to_csv(sys.argv[1]+'.csv',encoding='utf-8')
     writer = ExcelWriter(sys.argv[1]+'.xlsx')
     df.to_excel(writer,'Sheet2')
